@@ -6,5 +6,11 @@ app.get('/', function (req, res) {
   res.send('Hello from Cody!! Again...')
 })
 
+app.get('/show', (req, res) => {
+//    res.sendFile('index.html');
+res.sendFile('index.html' , { root : __dirname});          
+
+})
+
 app.listen(PORT)
     console.log(`Listening on port ${ PORT }`)
